@@ -29,6 +29,17 @@ jobs:
           cache: npm
           cache-dependency-path: "expense tracker/package-lock.json"
 
+      - name: Check package.json
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files:"
+          ls -la
+          echo "Package.json:"
+          cat package.json
+          echo "Scripts:"
+          npm run
+
       - name: Install dependencies
         run: |
           rm -rf ../node_modules
